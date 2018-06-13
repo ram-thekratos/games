@@ -1,0 +1,37 @@
+<div ng-controller="monitorController">
+     <div class="row"
+		style="width: 100%; margin-top: 13px; margin-left: 0px; margin-left: 0px;">
+		<div class="col-sm-7">
+			<img src="../images/optum_logo.png" alt="logo">
+		</div>
+		<div class="col-sm-3">
+			<img src="../images/beaware_logo.JPG" alt="logo"
+				style="width: 280px;">
+		</div>
+		<div class="col-sm-2">
+			<p class="form-title"
+				style="margin-top: 30px; font-size: 19px; margin-left: -100px;">2018
+				Edition</p>
+		</div>
+	</div>
+    <div class="container">
+    <div class="row col-md-10 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Request URL</th>
+            <th>HTTP Status</th>
+            <th>Request start time</th>
+            <th>Request end time</th>
+        </tr>
+    </thead>
+            <tr ng-repeat="item in data">
+   			 <td>{{item.requestURL}}</td>
+    		<td>{{item.httpStatus}}</td>
+    		 <td>{{item.requestStart}}</td>
+    		<td>{{item.requestEnd}}</td>
+  		</tr>
+    </table>
+    </div>
+</div>
+</div>

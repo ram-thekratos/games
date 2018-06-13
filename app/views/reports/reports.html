@@ -1,0 +1,38 @@
+<div ng-controller="reportController">
+     <div class="row"
+		style="width: 100%; margin-top: 13px; margin-left: 0px; margin-left: 0px;">
+		<div class="col-sm-7">
+			<img src="../images/optum_logo.png" alt="logo">
+		</div>
+		<div class="col-sm-3">
+			<img src="../images/beaware_logo.JPG" alt="logo"
+				style="width: 280px;">
+		</div>
+		<div class="col-sm-2">
+			<p class="form-title"
+				style="margin-top: 30px; font-size: 19px; margin-left: -100px;">2018
+				Edition</p>
+		</div>
+	</div>
+    <div class="container">
+        <div class="row">
+            <div class="wrap">
+                <p class="form-title">
+                    Reports</p>
+                <form class="login" name="loginForm">
+                    <label for="location" required="true"> Location</label>
+                    <select name="location" ng-model="data.location" class="selectClass" required="true">
+                                <option value="Bengaluru">Bengaluru</option>
+                                <option value="Gurgaon">Gurgaon</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Noida">Noida</option>
+                                <option value="Cebu">Cebu</option>
+                                <option value="Mckinley">Mckinley</option>
+                                <option value="QC">QC</option>
+                             </select>
+                    <input type="submit" value="Fetch Report" class="btn btn-success btn-sm" ng-click="getReport()" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

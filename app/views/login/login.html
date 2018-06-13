@@ -1,0 +1,78 @@
+<div ng-controller="loginController">
+	<div class="row"
+		style="width: 100%; margin-top: 13px; margin-left: 0px; margin-left: 0px;">
+		<div class="col-sm-7">
+			<img src="../images/optum_logo.png" alt="logo">
+		</div>
+		<div class="col-sm-3">
+			<img src="../images/beaware_logo.JPG" alt="logo"
+				style="width: 280px;">
+		</div>
+		<div class="col-sm-2">
+			<p class="form-title"
+				style="margin-top: 30px; font-size: 19px; margin-left: -100px;">2018
+				Edition</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="wrap">
+				<p class="form-title">Log In</p>
+				<form class="login" name="loginForm">
+					<label for="empName"> Employee Name</label> <input type="text"
+						placeholder="Employee Name" ng-model="data.name" required="true" />
+					<label for="empNumber"> Employee Number</label> <input type="text"
+						placeholder="Employee Number" ng-model="data.empID"
+						required="true" only-digits /> <label for="empEmail">
+						Employee Email</label> <input type="email" name="email" required="true"
+						ng-model="data.email" placeholder="Email address"
+						ng-pattern="/^[A-Za-z0-9._%+-]+@optum.com$/" />
+					<label for="location" required="true"> Employee Location</label> <select
+						name="location" ng-model="data.location" class="selectClass"
+						required="true">
+						<option value="Bengaluru">Bengaluru</option>
+						<option value="Gurgaon">Gurgaon</option>
+						<option value="Hyderabad">Hyderabad</option>
+						<option value="Noida">Noida</option>
+						<option value="Cebu">Cebu</option>
+						<option value="Mckinley">Mckinley</option>
+						<option value="QC">QC</option>
+					</select> <input type="submit" value="Enter" class="btn btn-success btn-sm"
+						ng-click="enterGame(loginForm)" />
+				</form>
+				<label class="note">Please note that the location you choose
+					should be the location of your site code and city as per the HR
+					records. If your entry of city and HR records don't match, the
+					entry will be considered void.</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+ <div id="emailAlert" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header alert-danger">
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please enter a valid email address. Emails except optum.com are not allowed.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-success btn-sm selectButton" data-dismiss="modal">Ok</button></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="loginAlert" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header alert-danger">
+                    <h4 class="modal-title">Error</h4>
+                </div>
+                <div class="modal-body">
+                    <p>You have participated in the Be(A)ware! games already. See you next time!</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-success btn-sm selectButton" data-dismiss="modal">Ok</button></div>
+            </div>
+        </div>
+    </div>
